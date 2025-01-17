@@ -28,7 +28,7 @@ for (const folder of slashCommandFolders) {
 const rest = new REST({ version: "10" }).setToken(token);
 (async () => {
     try {
-        await rest.put(Routes.applicationCommands("1314904179680219136"), {
+        await rest.put(Routes.applicationCommands("1180550435464020028"), {
             body: await slashCommandsLoader,
         });
         console.log("Successfully loadded application [/] commands.");

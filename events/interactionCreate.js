@@ -2,7 +2,7 @@ const { InteractionType } = require("discord.js");
 const client = require("../index.js");
 client.on("interactionCreate", async (interaction) => {
 
-  if(!interaction.guild) return;
+
 if(interaction.user.bot) return;
 
 if (interaction.type === InteractionType.ApplicationCommand) {
@@ -15,7 +15,8 @@ if (interaction.type === InteractionType.ApplicationCommand) {
     } catch (error) {
       console.log(error);
       await interaction.editReply({
-        content: "There was an error while executing this command!",
+        content: `There was an error while executing this command!
+        \`\`\`\n${error}\n\`\`\``,
         ephemeral: true,
       });
     }
