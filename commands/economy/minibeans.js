@@ -87,7 +87,7 @@ module.exports = {
       "es-ES": "saldo"
     },
 
-    description_localization: {
+    description_localizations: {
        "pt-BR": "Veja quantos mini feijões você tem ou de outro usuário",
        "es-ES": "Consulta cuántos Mini Frijoles tienes o verifica el saldo de otros usuarios"
     },
@@ -238,10 +238,10 @@ collector.on('collect', async(i) => {
 
    // console.log(i.message)
     await i.deferUpdate();
-    console.log(msg.id, i.message.id)
+  //  console.log(msg.id, i.message.id)
 
        if (msg.id !== i.message.id) return;
-console.log("ok")
+//console.log("ok")
     if (i.user.id !== user.id){
 
       await i.followUp({

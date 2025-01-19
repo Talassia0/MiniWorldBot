@@ -12,6 +12,8 @@ console.log("ok")
 client.commands = new Collection();
 client.slashCommands = new Collection();
 client.userdb = require("./mongodb/user.js");
+client.mapas = require("./mongodb/maps.js");
+client.serverdb = require("./mongodb/guild.js");
 // Initializing the project
 require("./handler/index.js");
 

@@ -13,7 +13,7 @@ let language = {
 
     "es-ES": {
       no: "El usuario no tiene un UID guardado.",
-      response: "¡El UID de (@user) es (uid)!"
+      response: "¡La UID de (@user) es (uid)!"
     }
   }
 }
