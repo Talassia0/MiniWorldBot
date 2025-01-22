@@ -157,7 +157,7 @@ updateMap: "**Latest updates**"
         //console.log(userdb.mapas.lista)
 
         let mapas = userdb.mapas.lista;
-let menuOptions = [];
+        let menuOptions = [];
 
 for (const mapa of mapas) {
   try {

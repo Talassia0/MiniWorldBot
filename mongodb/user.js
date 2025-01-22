@@ -7,7 +7,8 @@ module.exports = model('Usuários', new Schema({
   perfil: {
     sobremim: { type: String, default: "0" },
     tags: { type: Array, default: [] },
-    conquistas: { type: Array, default: [] }
+    conquistas: { type: Array, default: [] },
+    banner: { type: String, default: "profile.png"}
   },
 
   mapas: {
