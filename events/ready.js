@@ -1,12 +1,12 @@
-const client = require("../index");
+const client = require("../MiniWorldBOT");
 const mongoose = require('mongoose');
 const { ActivityType } = require("discord.js");
-
+const c = require("colors")
 client.on("ready", async() => {
-  console.log(`${client.user.tag} is up and ready to go!`);
+  console.log(c.blue(`${client.user.tag} is up and ready to go!`));
   
 
-await mongoose.connect(process.env.MONGO).then(() => console.log("Mongodb conectado!"))
+await mongoose.connect(process.env.MONGO).then(() => console.log(c.red("Mongodb conectado!")))
 
   client.user.setActivity('Versão de Teste liberada!', { type: ActivityType.Playing });
 

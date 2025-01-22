@@ -1,4 +1,4 @@
-const client = require("../index")
+const client = require("../MiniWorldBOT")
 const Discord = require("discord.js");
 
 let language = {

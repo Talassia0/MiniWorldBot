@@ -1,5 +1,5 @@
 const { InteractionType } = require("discord.js");
-const client = require("../index.js");
+const client = require("../MiniWorldBOT.js");
 const Discord = require("discord.js")
 client.on("interactionCreate", async (interaction) => {
 
