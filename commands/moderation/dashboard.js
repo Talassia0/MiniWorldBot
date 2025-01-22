@@ -38,7 +38,7 @@ module.exports = {
   name: "configure",
   description: "Activate administration systems on your server!",
   type: 1,
-  default_member_permissions: 1 << 5,
+  default_member_permissions: (1 << 5),
   name_localizations: {
     "pt-BR": "configurar",
     "es-ES": "configurar"
