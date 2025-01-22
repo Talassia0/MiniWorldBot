@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const ms = require("ms");
-
+const { PermissionsBitField } = require("discord.js")
 let language  = {
   "pt-BR": {
     titleMenu: "Configuração de (guild)",
@@ -48,6 +48,10 @@ module.exports = {
     "es-ES": "Activa sistemas de administración en tu servidor"
   },
   run: async(client, interaction) => {
+
+    if (!interaction.member.permissions.has(PermissionsBitField.ManageGuild)) return interaction.editReply({
+      content: "Você não tem permissão de gerenciar o servidor!"
+    })
 
 
     let serverdb = await client.serverdb.findOne({
