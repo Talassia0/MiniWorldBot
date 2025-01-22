@@ -8,7 +8,7 @@ client.on("ready", async() => {
 
 await mongoose.connect(process.env.MONGO).then(() => console.log("Mongodb conectado!"))
 
-  client.user.setActivity('MiniWorld: CREATA', { type: ActivityType.Playing });
+  client.user.setActivity('Versão de Teste liberada!', { type: ActivityType.Playing });
 
   client.user.setStatus('dnd')
  
