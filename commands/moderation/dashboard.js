@@ -49,7 +49,9 @@ module.exports = {
   },
   run: async(client, interaction) => {
 
-    if (!interaction.member.permissions.has(PermissionsBitField.ManageGuilds)) return interaction.editReply({
+    let membro = interaction.guild.members.cache.get(interaction.user.id)
+
+    if (!membro.permissions.has(PermissionsBitField.ManageGuilds)) return interaction.editReply({
       content: "Você não tem permissão de gerenciar o servidor!"
     })
 
