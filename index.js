@@ -1,6 +1,7 @@
 const { ClusterManager } = require('discord-hybrid-sharding');
 const clusters = require("./cluster-names.js")
 const c = require("colors");
+require("dotenv").config()
 const manager = new ClusterManager(`${__dirname}/MiniWorldBOT.js`, {
     totalShards: 2, // or numeric shard count
     /// Check below for more options
