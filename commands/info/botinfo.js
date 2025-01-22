@@ -3,18 +3,21 @@ const clusters = require("../../cluster-names.js")
 const { ClusterClient, getInfo } = require('discord-hybrid-sharding');
 
 let language = {
-  info: {
      "pt-BR": {
+       info: {
        embed_title: "Minhas Informações",
        embed_description: "Meu nome é (botName), e sou um bot totalmente inspirado no jogo Mini World: CREATA!\n\nSou um bot de: Economia e Informação para o seu servidor. Minha moeda se chama 'Mini Beans', que é uma das moedas do jogo.\nFui desenvolvido por ThallesKraft e estou hospedado na SquareCloud.\nAtualmente, estou em `(guilds)` servidores"
+       }
      },
 
     "es-ES": {
+      info: {
         embed_description: "Mi nombre es (botName), y soy un bot completamente inspirado en el juego Mini World: CREATA!\nSoy un bot de: Economía e Información para tu servidor. Mi moneda se llama 'Mini Beans', que es una de las monedas del juego.\nFui desarrollado por ThallesKraft y estoy alojado en SquareCloud.\n\nActualmente, estoy en `(guilds)` servidores", 
       embed_title: "Mis informaciones" 
     }
+    }
   }
-}
+
 
 module.exports = {
     name: "bot",
