@@ -8,6 +8,25 @@ if(interaction.user.bot) return;
 
 if (interaction.type === InteractionType.ApplicationCommand) {
 
+  let userdb = await client.userdb.findOne({
+    userId: interaction.user.id 
+  })
+
+  if (!userdb){
+    let newuser = new client.userdb({
+      userId: interaction.user.id 
+    })
+
+    await newuser.save();
+
+    userdb = await client.userdb.findOne({
+    userId: interaction.user.id 
+  })
+  }
+
+  if (userdb.ban){
+    return interaction.reply("Você foi banido");
+  } else {
   await interaction.deferReply();
   const command = client.slashCommands.get(interaction.commandName);
   if (command) {
@@ -22,7 +41,7 @@ if (interaction.type === InteractionType.ApplicationCommand) {
       });
     }
   }
-
+  }
 } else if (interaction.isModalSubmit()){
   if (interaction.customId === "sendMap"){
 

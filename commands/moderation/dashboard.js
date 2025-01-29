@@ -10,12 +10,18 @@ let language  = {
     menuDescription: "Clique na opção para selecionar",
     noUser: "Apenas (@user) pode interagir nesses botões!",
 
+    //Sistema de Reações
+
     reactionMenu: "Canal de texto para registros de Reações: (#channel)\n\nStatus do sistema: (status)",
     statusOn: "Ativado",
     statusOf: "Desativado",
     noChannel: "**`Nenhum canal ativo.`**",
     buttonReaction: "Selecionar Canal",
     reactionText: "Mencione o canal de texto para configurar."
+
+    // Sistema de autorole
+
+   
   },
   "es-ES": {
   "titleMenu": "Configuración de (guild)",
@@ -51,7 +57,9 @@ module.exports = {
 
     let membro = interaction.guild.members.cache.get(interaction.user.id)
 
-    if (!membro.permissions.has(PermissionsBitField.ManageGuilds)) return interaction.editReply({
+    console.log(membro.permissions.has(PermissionsBitField.ManageGuilds))
+
+    if (!membro.permissions.has(PermissionsBitField.ManageGuilds)) return await interaction.editReply({
       content: "Você não tem permissão de gerenciar o servidor!"
     })
 

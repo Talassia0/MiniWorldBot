@@ -3,6 +3,7 @@ const { Schema, model } = require("mongoose");
 module.exports = model('Usuários', new Schema({
   userId: { type: String },
   uid: { type: String, default: "no" },
+  ban: { type: Boolean, default: false },
 
   perfil: {
     sobremim: { type: String, default: "0" },
