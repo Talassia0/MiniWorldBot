@@ -25,7 +25,10 @@ if (interaction.type === InteractionType.ApplicationCommand) {
   }
 
   if (userdb.ban){
-    return interaction.reply("Você foi banido");
+    return interaction.reply({
+      content: `Você foi banido de usar o ${client.user} pelo motivo \`${userdb.motivo}\`.\n\nAchou o banimento injusto? Entre em contato com a equipe de suporte no servidor: https://discord.gg/zVG7vu2GwS`,
+      ephemeral: true
+    });
   } else {
   await interaction.deferReply();
   const command = client.slashCommands.get(interaction.commandName);
